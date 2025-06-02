@@ -1,6 +1,7 @@
-<p>product works!</p>
-<h2>Product Details</h2>
-<table>
+<p>product-list works!</p>
+
+<h2>Product List</h2>
+<table *ngIf="isShowClicked==true">
   <thead>
     <tr>
       <th>ID</th>
@@ -9,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr *ngFor="let product of products">
       <td>{{ product.id }}</td>
       <td>{{ product.name }}</td>
       <td>{{ product.price }}</td>
